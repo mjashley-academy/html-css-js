@@ -29,6 +29,7 @@ function Validate(formval) {
 }
 
 function displayRes() {
+  /** Used to display results on bottom of the form */
   var data = JSON.parse(localStorage.getItem("userDetails")) || [];
   if (data) {
     var Result = "";
