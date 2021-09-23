@@ -57,6 +57,7 @@ function displayRes() {
 function removeItem(id) {
   var storedVal = JSON.parse(localStorage.getItem("userDetails"));
   var afterRemoveVal = storedVal.filter((item) => item.id !== id);
+
   localStorage.setItem("userDetails", JSON.stringify(afterRemoveVal));
   displayRes();
 }
@@ -64,6 +65,7 @@ function removeItem(id) {
 function editItem(id) {
   var storedVal = JSON.parse(localStorage.getItem("userDetails"));
   var selectedVal = storedVal.filter((item) => item.id === id);
+
   document.getElementById("First_Name").value = selectedVal[0].fname;
   document.getElementById("Last_Name").value = selectedVal[0].lname;
   document.getElementById("Email").value = selectedVal[0].email;
