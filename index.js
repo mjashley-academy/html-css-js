@@ -56,6 +56,7 @@ function displayRes() {
 }
 
 function removeItem(id) {
+  /** remove item from localstorage */
   var storedVal = JSON.parse(localStorage.getItem("userDetails"));
   var afterRemoveVal = storedVal.filter((item) => item.id !== id);
 
